@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="DALLE_UI.MainPage"
+             Title="DALL-E"
+             Loaded="MainPage_Loaded">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="123"/>
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <StackLayout Padding="15">
+
+            <Label Text="Введите запрос:"/>
+            <Entry x:Name="inputRequest"
+                   ClearButtonVisibility="WhileEditing"/>
+            <Button Text="Сгенерировать"
+                    Clicked="ButtonGenerateImage_Clicked"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Row="0" Grid.Column="0" 
+                        Text="Перегенерировать" Margin="0,5,0,5" 
+                        HeightRequest="50"/>
+                <Button Grid.Row="0" Grid.Column="1" 
+                        Clicked="ButtonSaveImage_Clicked"
+                        Text="Сохранить" Margin="5,0,0,0" 
+                        HeightRequest="50"/>
+
+                <Image x:Name="generatedImage"
+                        Grid.Row="2" Grid.ColumnSpan="2" 
+                       Source="/Resources/Images/dotnet_bot.svg"
+                       Margin="10,10,10,10"/>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
