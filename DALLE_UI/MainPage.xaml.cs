@@ -1,4 +1,4 @@
-﻿using CommunityToolkit.Maui.Alerts;
+using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
 using DALLE_LIB;
 using System.Drawing.Text;
@@ -19,7 +19,7 @@ namespace DALLE_UI
 
 			if (File.Exists(FileManagement.GetKeyFilePath()))
 			{
-				//this.apiKey = ReadApiKey(); //= "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";
+				//this.apiKey = ReadApiKey();
 				//this.dalleImage = new DalleImage(this.apiKey, DeviceInfo.Name);
 				Init();
 			}
